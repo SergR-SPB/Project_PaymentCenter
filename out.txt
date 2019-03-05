@@ -1,0 +1,61 @@
+Полный список групп
+*******************
+Group{groupId=1, nameGroup='Первая', curator='Доктор Борменталь', speciality='Создание собачек из человеков'}
+Group{groupId=2, nameGroup='Вторая', curator='Профессор Преображенский', speciality='Создание человеков из собачек'}
+
+Полный список студентов
+***********************
+Student{studentId=1, firstName='Иван', lastName='Сергеевич', surName='Степанов', sex=М, dateOfBirth=Fri Apr 20 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+Student{studentId=2, firstName='Наталья', lastName='Андреевна', surName='Чичикова', sex=Ж, dateOfBirth=Tue Jul 10 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+Student{studentId=3, firstName='Петр', lastName='Викторович', surName='Сушкин', sex=М, dateOfBirth=Fri Apr 12 14:33:14 MSD 1991, groupId=1, educationYear=2006}
+Student{studentId=4, firstName='Вероника', lastName='Сергеевна', surName='Ковалева', sex=Ж, dateOfBirth=Mon Aug 19 14:33:14 MSD 1991, groupId=1, educationYear=2006}
+
+Список студентов по группам
+***************************
+---> Группа:Первая
+Student{studentId=3, firstName='Петр', lastName='Викторович', surName='Сушкин', sex=М, dateOfBirth=Fri Apr 12 14:33:14 MSD 1991, groupId=1, educationYear=2006}
+Student{studentId=4, firstName='Вероника', lastName='Сергеевна', surName='Ковалева', sex=Ж, dateOfBirth=Mon Aug 19 14:33:14 MSD 1991, groupId=1, educationYear=2006}
+---> Группа:Вторая
+Student{studentId=1, firstName='Иван', lastName='Сергеевич', surName='Степанов', sex=М, dateOfBirth=Fri Apr 20 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+Student{studentId=2, firstName='Наталья', lastName='Андреевна', surName='Чичикова', sex=Ж, dateOfBirth=Tue Jul 10 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+
+Добавление студента:Student{studentId=5, firstName='Игорь', lastName='Владимирович', surName='Перебежкин', sex=М, dateOfBirth=Tue Oct 01 14:33:14 MSK 1991, groupId=1, educationYear=2006}
+********************
+--->> Полный список студентов после добавления
+Student{studentId=1, firstName='Иван', lastName='Сергеевич', surName='Степанов', sex=М, dateOfBirth=Fri Apr 20 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+Student{studentId=2, firstName='Наталья', lastName='Андреевна', surName='Чичикова', sex=Ж, dateOfBirth=Tue Jul 10 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+Student{studentId=3, firstName='Петр', lastName='Викторович', surName='Сушкин', sex=М, dateOfBirth=Fri Apr 12 14:33:14 MSD 1991, groupId=1, educationYear=2006}
+Student{studentId=4, firstName='Вероника', lastName='Сергеевна', surName='Ковалева', sex=Ж, dateOfBirth=Mon Aug 19 14:33:14 MSD 1991, groupId=1, educationYear=2006}
+Student{studentId=5, firstName='Игорь', lastName='Владимирович', surName='Перебежкин', sex=М, dateOfBirth=Tue Oct 01 14:33:14 MSK 1991, groupId=1, educationYear=2006}
+
+Редактирование данных студента:Student{studentId=5, firstName='Игорь', lastName='Владимирович', surName='Новоперебежкин', sex=М, dateOfBirth=Tue Oct 01 14:33:14 MSK 1991, groupId=1, educationYear=2006}
+*******************************
+--->> Полный список студентов после редактирования
+Student{studentId=1, firstName='Иван', lastName='Сергеевич', surName='Степанов', sex=М, dateOfBirth=Fri Apr 20 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+Student{studentId=2, firstName='Наталья', lastName='Андреевна', surName='Чичикова', sex=Ж, dateOfBirth=Tue Jul 10 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+Student{studentId=3, firstName='Петр', lastName='Викторович', surName='Сушкин', sex=М, dateOfBirth=Fri Apr 12 14:33:14 MSD 1991, groupId=1, educationYear=2006}
+Student{studentId=4, firstName='Вероника', lastName='Сергеевна', surName='Ковалева', sex=Ж, dateOfBirth=Mon Aug 19 14:33:14 MSD 1991, groupId=1, educationYear=2006}
+Student{studentId=5, firstName='Игорь', lastName='Владимирович', surName='Новоперебежкин', sex=М, dateOfBirth=Tue Oct 01 14:33:14 MSK 1991, groupId=1, educationYear=2006}
+
+Удаление студента:Student{studentId=5, firstName='Игорь', lastName='Владимирович', surName='Новоперебежкин', sex=М, dateOfBirth=Tue Oct 01 14:33:14 MSK 1991, groupId=1, educationYear=2006}
+******************
+--->> Полный список студентов после удаления
+Student{studentId=1, firstName='Иван', lastName='Сергеевич', surName='Степанов', sex=М, dateOfBirth=Fri Apr 20 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+Student{studentId=2, firstName='Наталья', lastName='Андреевна', surName='Чичикова', sex=Ж, dateOfBirth=Tue Jul 10 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+Student{studentId=3, firstName='Петр', lastName='Викторович', surName='Сушкин', sex=М, dateOfBirth=Fri Apr 12 14:33:14 MSD 1991, groupId=1, educationYear=2006}
+Student{studentId=4, firstName='Вероника', lastName='Сергеевна', surName='Ковалева', sex=Ж, dateOfBirth=Mon Aug 19 14:33:14 MSD 1991, groupId=1, educationYear=2006}
+
+Перевод студентов из 1-ой во 2-ю группу
+***************************************
+--->> Полный список студентов после перевода
+Student{studentId=1, firstName='Иван', lastName='Сергеевич', surName='Степанов', sex=М, dateOfBirth=Fri Apr 20 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+Student{studentId=2, firstName='Наталья', lastName='Андреевна', surName='Чичикова', sex=Ж, dateOfBirth=Tue Jul 10 14:33:14 MSD 1990, groupId=2, educationYear=2006}
+Student{studentId=3, firstName='Петр', lastName='Викторович', surName='Сушкин', sex=М, dateOfBirth=Fri Apr 12 14:33:14 MSD 1991, groupId=2, educationYear=2007}
+Student{studentId=4, firstName='Вероника', lastName='Сергеевна', surName='Ковалева', sex=Ж, dateOfBirth=Mon Aug 19 14:33:14 MSD 1991, groupId=2, educationYear=2007}
+
+Удаление студентов из группы:Group{groupId=2, nameGroup='Вторая', curator='Профессор Преображенский', speciality='Создание человеков из собачек'} в 2006 году
+*****************************
+--->> Полный список студентов после удаления
+Student{studentId=3, firstName='Петр', lastName='Викторович', surName='Сушкин', sex=М, dateOfBirth=Fri Apr 12 14:33:14 MSD 1991, groupId=2, educationYear=2007}
+Student{studentId=4, firstName='Вероника', lastName='Сергеевна', surName='Ковалева', sex=Ж, dateOfBirth=Mon Aug 19 14:33:14 MSD 1991, groupId=2, educationYear=2007}
+
