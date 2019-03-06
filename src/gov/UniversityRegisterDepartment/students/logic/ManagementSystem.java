@@ -1,5 +1,6 @@
 package gov.UniversityRegisterDepartment.students.logic;
 
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 public class ManagementSystem {
@@ -67,7 +68,7 @@ public class ManagementSystem {
         student.setSurName("Иванов");
         student.setStudentId(1);
         student.setGroupId(1);
-        student.setEducationYear(2019);
+        student.setEducationYear(2016);
         calendar.set(1990, 6, 4);
         student.setDateOfBirth(calendar.getTime());
         students.add(student);
@@ -76,7 +77,7 @@ public class ManagementSystem {
         student.setSurName("Петров");
         student.setStudentId(2);
         student.setGroupId(1);
-        student.setEducationYear(2019);
+        student.setEducationYear(2016);
         calendar.set(1991, 6, 4);
         student.setDateOfBirth(calendar.getTime());
         students.add(student);
@@ -85,7 +86,7 @@ public class ManagementSystem {
         student.setSurName("Сидоров");
         student.setStudentId(3);
         student.setGroupId(1);
-        student.setEducationYear(2019);
+        student.setEducationYear(2016);
         calendar.set(1992, 6, 4);
         student.setDateOfBirth(calendar.getTime());
         students.add(student);
@@ -95,7 +96,7 @@ public class ManagementSystem {
         student.setSurName("Баширов");
         student.setStudentId(4);
         student.setGroupId(1);
-        student.setEducationYear(2019);
+        student.setEducationYear(2016);
         calendar.set(1989, 6, 4);
         student.setDateOfBirth(calendar.getTime());
         students.add(student);
@@ -106,7 +107,7 @@ public class ManagementSystem {
         student.setSurName("Иванов2");
         student.setStudentId(5);
         student.setGroupId(2);
-        student.setEducationYear(2018);
+        student.setEducationYear(2019);
         calendar.set(1990, 6, 14);
         student.setDateOfBirth(calendar.getTime());
         students.add(student);
@@ -139,7 +140,7 @@ public class ManagementSystem {
         student.setDateOfBirth(calendar.getTime());
         students.add(student);
 
-//Группа2
+//Группа3
         student = new Student();
         student.setSurName("Иванов3");
         student.setStudentId(9);
@@ -176,6 +177,98 @@ public class ManagementSystem {
         calendar.set(1989, 6, 24);
         student.setDateOfBirth(calendar.getTime());
         students.add(student);
+    }
+    //Получить список групп
+    public List<Group>getGroups(){
+        return groups;
+    }
+    //Получить список студентов
+    public Collection<Student> getAllStudents() {
+        return students;
+    }
+    //Получаем список студентов по группе и году поступления
+
+    public Collection<Student> getStudentsFromGroup(Group group, int year) {
+        Collection<Student> studentCollection = new TreeSet<Student>();
+
+           for (Student si:students) {
+               if (si.getGroupId() == group.getGroupId() && si.getEducationYear()==year ) {
+                   studentCollection.add(si);
+               }
+        }
+        return studentCollection;
+    }
+
+    //Перевод студентов из группы в группу
+
+    public void moveStudentToGroup (Group oldGroup, int oldYear, Group newGroup, int newYear){
+        for (Student si : students){
+            if (si.getGroupId() == oldGroup.getGroupId() && si.getEducationYear()==oldYear ) {
+            si.setGroupId(newGroup.getGroupId());
+            si.setEducationYear(newYear);
+            }
+        }
+    }
+    // Удалить всех студентов из группы
+
+    public void removeStudentForGroup (Group group, int year){
+        Collection<Student> tmp = new TreeSet<Student>();
+        for (Student si:students ){
+            if( si.getGroupId() != group.getGroupId() || si.getEducationYear() !=year){
+                tmp.add(si);
+            }
+        }students = tmp;
+    }
+
+    // Добавить студента
+    public void insertStudent(Student student) {
+        // Просто добавляем объект в коллекцию
+        students.add(student);
+    }
+
+    // Обновить данные о студенте
+    public void updateStudent(Student student) {
+        Student updStudent = null;
+        for (Student si : students) {
+            if (si.getStudentId() == student.getStudentId()) {
+                updStudent = si;
+                break;
+            }
+        }
+        updStudent.setFirstName(student.getFirstName());
+        updStudent.setLastName(student.getLastName());
+        updStudent.setSurName(student.getSurName());
+        updStudent.setSex(student.getSex());
+        updStudent.setDateOfBirth(student.getDateOfBirth());
+        updStudent.setGroupId(student.getGroupId());
+        updStudent.setEducationYear(student.getEducationYear());
+    }
+
+    // Удалить студента
+    public void deleteStudent(Student student) {
+        Student delStudent = null;
+        for (Student si : students) {
+            if (si.getStudentId() == student.getStudentId()) {
+                delStudent = si;
+                break;
+            }
+        }
+        students.remove(delStudent);
+    }
+
+
+    public static void printString(Object s) {
+        try {
+            System.out.println(new String(s.toString().getBytes("windows-1251"), "windows-1252"));
+        } catch (UnsupportedEncodingException ex) {
+            ex.printStackTrace();
+        }
 
     }
+
+    public static void printString() {
+        System.out.println();
+    }
+
+
 }
