@@ -8,12 +8,14 @@ public class Student implements Comparable{  //Интерфейс Сравнит
 
     private int studentId;
     private String firstName;
-    private String lastName;
+
     private String surName;
-    private char sex;
+
     private Date dateOfBirth;
     private int groupId;
     private int educationYear;
+
+
 
     public int getStudentId() {
         return studentId;
@@ -31,13 +33,7 @@ public class Student implements Comparable{  //Интерфейс Сравнит
         this.firstName = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 
     public String getSurName() {
         return surName;
@@ -47,13 +43,7 @@ public class Student implements Comparable{  //Интерфейс Сравнит
         this.surName = surName;
     }
 
-    public char getSex() {
-        return sex;
-    }
 
-    public void setSex(char sex) {
-        this.sex = sex;
-    }
 
     public Date getDateOfBirth() {
         return dateOfBirth;
@@ -79,14 +69,22 @@ public class Student implements Comparable{  //Интерфейс Сравнит
         this.educationYear = educationYear;
     }
 
+ /* protected Student(int studentId, String surName, int groupId) {//??????????????????????????
+        this.studentId = studentId;
+        this.surName = surName;
+        this.dateOfBirth = dateOfBirth;
+        this.groupId = groupId;
+        this.educationYear = educationYear;
+    }*/
+
     @Override
     public String toString() {
         return "Student{" +
                 "studentId=" + studentId +
                 ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+
                 ", surName='" + surName + '\'' +
-                ", sex=" + sex +
+
                 ", dateOfBirth=" + dateOfBirth +
                 ", groupId=" + groupId +
                 ", educationYear=" + educationYear +
