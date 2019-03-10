@@ -8,9 +8,7 @@ public class Student implements Comparable{  //Интерфейс Сравнит
 
     private int studentId;
     private String firstName;
-
     private String surName;
-
     private Date dateOfBirth;
     private int groupId;
     private int educationYear;
@@ -33,8 +31,6 @@ public class Student implements Comparable{  //Интерфейс Сравнит
         this.firstName = firstName;
     }
 
-
-
     public String getSurName() {
         return surName;
     }
@@ -42,8 +38,6 @@ public class Student implements Comparable{  //Интерфейс Сравнит
     public void setSurName(String surName) {
         this.surName = surName;
     }
-
-
 
     public Date getDateOfBirth() {
         return dateOfBirth;
@@ -82,9 +76,7 @@ public class Student implements Comparable{  //Интерфейс Сравнит
         return "Student{" +
                 "studentId=" + studentId +
                 ", firstName='" + firstName + '\'' +
-
                 ", surName='" + surName + '\'' +
-
                 ", dateOfBirth=" + dateOfBirth +
                 ", groupId=" + groupId +
                 ", educationYear=" + educationYear +
